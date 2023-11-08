@@ -1,4 +1,4 @@
-;; eaf
+(add-to-list 'load-path (concat user-emacs-directory "lib/emacs-application-framework/"))
 (use-package eaf
   :defer t
   :commands (eaf-open-browser eaf-open eaf-search-it eaf-open-browser-with-history eaf-open-browser-other-window eaf-open-pyqterminal)
