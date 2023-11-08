@@ -5,8 +5,8 @@
 My customized Emacs configuration, use vertico as completion and lsp-bridge as completion.
 
 * Installation
-To install, just clone to src_elisp{user-emacs-directory}, i.e. src_bash{~/.emacs.d} or src_bash{~/.config/emacs}
-#+begin_src bash
+To install, just clone to ~user-emacs-director~, i.e. ~~/.emacs.d~ or ~~/.config/emacs~
+#+begin_src bash :export no
   git clone https://github.com/ypcodes/geistemacs.git ~/.config/emacs
 #+end_src
 
