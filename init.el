@@ -54,6 +54,7 @@
 (use-package eieio)
 
 (use-package auto-compile
+  :defer t
   :config
   (setq auto-compile-display-buffer               nil)
   (setq auto-compile-mode-line-counter            t)
@@ -101,12 +102,11 @@
     (set-face-attribute 'diff-refine-removed nil :extend t)
     (set-face-attribute 'diff-refine-added   nil :extend t)))
 
-(use-package dired
-  :defer t
-  :config (setq dired-listing-switches "-alh"))
+;; (use-package dired
+;;   :defer t
+;;   :config (setq dired-listing-switches "-alh"))
 
 (use-package eldoc
-  :when (version< "25" emacs-version)
   :config (global-eldoc-mode))
 
 (use-package help
@@ -117,6 +117,7 @@
   (setq isearch-allow-scroll t))
 
 (use-package lisp-mode
+  :defer t
   :config
   (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode)
   (add-hook 'emacs-lisp-mode-hook 'reveal-mode)
@@ -141,20 +142,21 @@
   :config (show-paren-mode))
 
 (use-package prog-mode
-  :config (global-prettify-symbols-mode)
+  :config (global-prettify-symbols-mode) 
   (defun indicate-buffer-boundaries-left ()
     (setq indicate-buffer-boundaries 'left))
   (add-hook 'prog-mode-hook 'indicate-buffer-boundaries-left))
+
 
 (use-package recentf
   :demand t
   :config (add-to-list 'recentf-exclude "^/\\(?:ssh\\|su\\|sudo\\)?x?:"))
 
-(use-package savehist
-  :config (savehist-mode))
+;;(use-package savehist
+  ;;:config (savehist-mode))
 
 (use-package saveplace
-  :when (version< "25" emacs-version)
+  ;;:when (version< "25" emacs-version)
   :config (save-place-mode))
 
 (use-package simple
@@ -214,7 +216,6 @@
 
   ;; Enable recursive minibuffers
   (setq enable-recursive-minibuffers t)
-  :config
   (setq visible-bell 0)
   (electric-pair-mode t)
   (electric-indent-mode t)
@@ -224,6 +225,10 @@
   (setq confirm-kill-emacs nil)
 )
 
+(use-package benchmark-init
+  :config
+  ;; To disable collection of benchmark data after init is done.
+  (add-hook 'after-init-hook 'benchmark-init/deactivate))
 ;;; Tequila worms
 
 (progn ;     startup
@@ -251,6 +256,7 @@
 (require 'init-evil)
 (require 'init-org)
 (require 'init-eaf)
+(require 'init-misc)
 
 ;; Local Variables:
 ;; indent-tabs-mode: nil
