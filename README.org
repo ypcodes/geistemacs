@@ -5,12 +5,11 @@
 My customized Emacs configuration, use vertico as completion and lsp-bridge as completion.
 
 * Installation
-To install, just clone to ~user-emacs-director~, i.e. ~~/.emacs.d~ or ~~/.config/emacs~
+To install, just clone to ~user-emacs-directory~, i.e. ~~/.emacs.d~ or ~~/.config/emacs~
 #+begin_src bash :export no
-  git clone https://github.com/ypcodes/geistemacs.git ~/.config/emacs
+  git clone --recurse-submodules https://github.com/ypcodes/geistemacs.git ~/.config/emacs
   cd ~/.config/emacs
-  make bootstrap-borg
-  make bootstrap
-  git submodule update --init --recuresive
-  emacs
+  make build
 #+end_src
+
+For Windows user, it's recommended to use WSL.
