@@ -14,6 +14,7 @@
   (evil-define-key 'normal 'global (kbd "<leader>:") 'execute-extended-command)
   (evil-define-key 'normal 'global (kbd "<leader>SPC") 'project-find-file)
   (evil-define-key 'normal 'global (kbd "<leader>ff") 'find-file)
+  (evil-define-key 'normal 'global (kbd "<leader>fr") 'recentf)
   (evil-define-key 'normal 'global (kbd "<leader>bk") 'kill-current-buffer)
   (evil-define-key 'normal 'global (kbd "<leader>bb") 'consult-buffer)
   (evil-define-key 'normal 'global (kbd "<leader>bi") 'ibuffer)
