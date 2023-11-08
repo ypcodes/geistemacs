@@ -1,0 +1,273 @@
+[include]
+	path = .gitremotes
+	path = .borgconfig
+[submodule "annalist"]
+	path = lib/annalist
+	url = https://github.com/noctuid/annalist.el
+[submodule "auto-compile"]
+	path = lib/auto-compile
+	url = git@github.com:emacscollective/auto-compile.git
+[submodule "avy"]
+	path = lib/avy
+	url = https://github.com/abo-abo/avy
+[submodule "better-defaults"]
+	path = lib/better-defaults
+	url = git@github.com:emacsmirror/better-defaults.git
+[submodule "borg"]
+	path = lib/borg
+	url = git@github.com:emacscollective/borg.git
+[submodule "closql"]
+	path = lib/closql
+	url = git@github.com:magit/closql.git
+[submodule "compat"]
+	path = lib/compat
+	url = git@github.com:emacs-compat/compat.git
+[submodule "consult"]
+	path = lib/consult
+	url = https://github.com/minad/consult
+[submodule "dash"]
+	path = lib/dash
+	url = https://github.com/magnars/dash.el
+[submodule "diff-hl"]
+	path = lib/diff-hl
+	url = git@github.com:dgutov/diff-hl.git
+[submodule "doom-modeline"]
+	path = lib/doom-modeline
+	url = https://github.com/seagle0128/doom-modeline
+[submodule "doom-themes"]
+	path = lib/doom-themes
+	url = https://github.com/doomemacs/themes
+[submodule "eaf"]
+	path = lib/eaf
+	url = https://github.com/emacs-eaf/emacs-application-framework
+[submodule "emacsql"]
+	path = lib/emacsql
+	url = git@github.com:magit/emacsql.git
+[submodule "embark"]
+	path = lib/embark
+	url = https://github.com/oantolin/embark
+[submodule "epkg"]
+	path = lib/epkg
+	url = git@github.com:emacscollective/epkg.git
+[submodule "evil"]
+	path = lib/evil
+	url = https://github.com/emacs-evil/evil
+[submodule "evil-collection"]
+	path = lib/evil-collection
+	url = https://github.com/emacs-evil/evil-collection
+[submodule "f"]
+	path = lib/f
+	url = https://github.com/rejeep/f.el
+[submodule "git-modes"]
+	path = lib/git-modes
+	url = git@github.com:magit/git-modes.git
+[submodule "lib/annalist.el"]
+	path = lib/annalist.el
+	url = https://github.com/noctuid/annalist.el
+[submodule "lib/auto-compile"]
+	path = lib/auto-compile
+	url = git@github.com:emacscollective/auto-compile.git
+[submodule "lib/avy"]
+	path = lib/avy
+	url = https://github.com/abo-abo/avy
+[submodule "lib/better-defaults"]
+	path = lib/better-defaults
+	url = git@github.com:emacsmirror/better-defaults.git
+[submodule "lib/borg"]
+	path = lib/borg
+	url = git@github.com:emacscollective/borg.git
+[submodule "lib/closql"]
+	path = lib/closql
+	url = git@github.com:magit/closql.git
+[submodule "lib/compat"]
+	path = lib/compat
+	url = git@github.com:emacs-compat/compat.git
+[submodule "lib/consult"]
+	path = lib/consult
+	url = https://github.com/minad/consult
+[submodule "lib/dash.el"]
+	path = lib/dash.el
+	url = git@github.com:magnars/dash.el.git
+[submodule "lib/diff-hl"]
+	path = lib/diff-hl
+	url = git@github.com:dgutov/diff-hl.git
+[submodule "lib/doom-modeline"]
+	path = lib/doom-modeline
+	url = https://github.com/seagle0128/doom-modeline
+[submodule "lib/emacs-application-framework"]
+	path = lib/emacs-application-framework
+	url = https://github.com/emacs-eaf/emacs-application-framework
+[submodule "lib/emacs-sqlite3-api"]
+	path = lib/emacs-sqlite3-api
+	url = git@github.com:pekingduck/emacs-sqlite3-api.git
+[submodule "lib/emacsql"]
+	path = lib/emacsql
+	url = git@github.com:magit/emacsql.git
+[submodule "lib/embark"]
+	path = lib/embark
+	url = https://github.com/oantolin/embark
+[submodule "lib/epkg"]
+	path = lib/epkg
+	url = git@github.com:emacscollective/epkg.git
+[submodule "lib/evil"]
+	path = lib/evil
+	url = https://github.com/emacs-evil/evil
+[submodule "lib/evil-collection"]
+	path = lib/evil-collection
+	url = https://github.com/emacs-evil/evil-collection
+[submodule "lib/f.el"]
+	path = lib/f.el
+	url = https://github.com/rejeep/f.el
+[submodule "lib/git-modes"]
+	path = lib/git-modes
+	url = git@github.com:magit/git-modes.git
+[submodule "lib/llama"]
+	path = lib/llama
+	url = https://git.sr.ht/~tarsius/llama
+[submodule "lib/lsp-bridge"]
+	path = lib/lsp-bridge
+	url = https://github.com/manateelazycat/lsp-bridge
+[submodule "lib/magit"]
+	path = lib/magit
+	url = git@github.com:magit/magit.git
+[submodule "lib/marginalia"]
+	path = lib/marginalia
+	url = https://github.com/minad/marginalia
+[submodule "lib/markdown-mode"]
+	path = lib/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode
+[submodule "lib/nerd-icons-completion"]
+	path = lib/nerd-icons-completion
+	url = https://github.com/rainstormstudio/nerd-icons-completion
+[submodule "lib/nerd-icons.el"]
+	path = lib/nerd-icons.el
+	url = https://github.com/rainstormstudio/nerd-icons.el
+[submodule "lib/orderless"]
+	path = lib/orderless
+	url = https://github.com/oantolin/orderless
+[submodule "lib/org-bullets"]
+	path = lib/org-bullets
+	url = https://github.com/integral-dw/org-bullets
+[submodule "lib/org-evil"]
+	path = lib/org-evil
+	url = https://github.com/GuiltyDolphin/org-evil
+[submodule "lib/org-modern"]
+	path = lib/org-modern
+	url = https://github.com/minad/org-modern
+[submodule "lib/org-roam"]
+	path = lib/org-roam
+	url = https://github.com/org-roam/org-roam
+[submodule "lib/posframe"]
+	path = lib/posframe
+	url = https://github.com/tumashu/posframe
+[submodule "lib/s.el"]
+	path = lib/s.el
+	url = https://github.com/magnars/s.el
+[submodule "lib/shrink-path.el"]
+	path = lib/shrink-path.el
+	url = https://gitlab.com/bennya/shrink-path.el
+[submodule "lib/tempel"]
+	path = lib/tempel
+	url = https://github.com/minad/tempel
+[submodule "lib/tempel-collection"]
+	path = lib/tempel-collection
+	url = https://github.com/Crandel/tempel-collection
+[submodule "lib/themes"]
+	path = lib/themes
+	url = https://github.com/doomemacs/themes
+[submodule "lib/transient"]
+	path = lib/transient
+	url = git@github.com:magit/transient.git
+[submodule "lib/treepy.el"]
+	path = lib/treepy.el
+	url = git@github.com:volrath/treepy.el.git
+[submodule "lib/use-package"]
+	path = lib/use-package
+	url = git@github.com:jwiegley/use-package.git
+[submodule "lib/vertico"]
+	path = lib/vertico
+	url = https://github.com/minad/vertico
+[submodule "lib/with-editor"]
+	path = lib/with-editor
+	url = git@github.com:magit/with-editor.git
+[submodule "lib/yasnippet"]
+	path = lib/yasnippet
+	url = https://github.com/joaotavora/yasnippet
+[submodule "llama"]
+	path = lib/llama
+	url = https://git.sr.ht/~tarsius/llama
+[submodule "lsp-bridge"]
+	path = lib/lsp-bridge
+	url = https://github.com/manateelazycat/lsp-bridge
+[submodule "magit"]
+	path = lib/magit
+	url = git@github.com:magit/magit.git
+[submodule "marginalia"]
+	path = lib/marginalia
+	url = https://github.com/minad/marginalia
+[submodule "markdown-mode"]
+	path = lib/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode
+[submodule "nerd-icons"]
+	path = lib/nerd-icons
+	url = https://github.com/rainstormstudio/nerd-icons.el
+[submodule "nerd-icons-completion"]
+	path = lib/nerd-icons-completion
+	url = https://github.com/rainstormstudio/nerd-icons-completion
+[submodule "orderless"]
+	path = lib/orderless
+	url = https://github.com/oantolin/orderless
+[submodule "org-bullets"]
+	path = lib/org-bullets
+	url = https://github.com/integral-dw/org-bullets
+[submodule "org-evil"]
+	path = lib/org-evil
+	url = https://github.com/GuiltyDolphin/org-evil
+[submodule "org-modern"]
+	path = lib/org-modern
+	url = https://github.com/minad/org-modern
+[submodule "org-roam"]
+	path = lib/org-roam
+	url = https://github.com/org-roam/org-roam
+[submodule "posframe"]
+	path = lib/posframe
+	url = https://github.com/tumashu/posframe
+[submodule "s"]
+	path = lib/s
+	url = https://github.com/magnars/s.el
+[submodule "shrink-path"]
+	path = lib/shrink-path
+	url = https://gitlab.com/bennya/shrink-path.el
+[submodule "sqlite3"]
+	path = lib/sqlite3
+	url = git@github.com:pekingduck/emacs-sqlite3-api.git
+[submodule "tempel"]
+	path = lib/tempel
+	url = https://github.com/minad/tempel
+[submodule "tempel-collection"]
+	path = lib/tempel-collection
+	url = https://github.com/Crandel/tempel-collection
+[submodule "toc-org"]
+	path = lib/toc-org
+	url = https://github.com/snosov1/toc-org
+[submodule "transient"]
+	path = lib/transient
+	url = git@github.com:magit/transient.git
+[submodule "treepy"]
+	path = lib/treepy
+	url = git@github.com:volrath/treepy.el.git
+[submodule "use-package"]
+	path = lib/use-package
+	url = git@github.com:jwiegley/use-package.git
+[submodule "vertico"]
+	path = lib/vertico
+	url = https://github.com/minad/vertico
+[submodule "which-key"]
+	path = lib/which-key
+	url = https://github.com/justbur/emacs-which-key
+[submodule "with-editor"]
+	path = lib/with-editor
+	url = git@github.com:magit/with-editor.git
+[submodule "yasnippet"]
+	path = lib/yasnippet
+	url = https://github.com/joaotavora/yasnippet
