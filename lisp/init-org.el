@@ -5,7 +5,8 @@
 ;; Author: peng <peng@peng>
 ;; Keywords: lisp, 
 (use-package org
-  ;;:defer t
+  :defer t
+  :hook (org-mode . (lambda() (org-indent-mode t) (visual-line-mode t)))
   :config
 
   ;; Choose some fonts
@@ -14,7 +15,7 @@
   ;; (set-face-attribute 'org-modern-symbol nil :family "Iosevka")
 
   ;; Add frame borders and window dividers
-  (setq org-indent-mode t)
+  ;;(setq org-indent-mode t)
   (setq
    ;; Edit settings
    org-auto-align-tags nil
@@ -38,13 +39,13 @@
      " ┄┄┄┄┄ " "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄")
    org-agenda-current-time-string
    "◀── now ─────────────────────────────────────────────────")
-  (setq org-agenda-files '("~/org/diary.org" "~/org/Inbox.org" "~/org/todo.org")
-	org-log-repeat "note")
   )
+
 (use-package org-bullets
   :after org
   :config
-  (org-bullets-mode t))
+  (org-bullets-mode t)
+)
 
 (use-package org-modern
   :after org

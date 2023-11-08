@@ -13,6 +13,9 @@
 [submodule "avy"]
 	path = lib/avy
 	url = https://github.com/abo-abo/avy
+[submodule "benchmark-init"]
+	path = lib/benchmark-init
+	url = https://github.com/dholm/benchmark-init-el
 [submodule "better-defaults"]
 	path = lib/better-defaults
 	url = git@github.com:emacsmirror/better-defaults.git
@@ -274,6 +277,12 @@
 [submodule "vertico"]
 	path = lib/vertico
 	url = https://github.com/minad/vertico
+[submodule "vterm"]
+	path = lib/vterm
+	url = https://github.com/akermu/emacs-libvterm
+[submodule "vterm-toggle"]
+	path = lib/vterm-toggle
+	url = https://github.com/jixiuf/vterm-toggle
 [submodule "which-key"]
 	path = lib/which-key
 	url = https://github.com/justbur/emacs-which-key

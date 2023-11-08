@@ -1,5 +1,7 @@
 ;; evil
 (use-package evil
+  :defer t
+  :commands (evil-next-line)
   :init
   (setq evil-want-integration t) ;; This is optional since it's already set to t by default.
   (setq evil-want-keybinding nil)
@@ -20,6 +22,7 @@
   (evil-define-key 'normal 'global (kbd "<leader>gl") 'avy-goto-line)
   (evil-define-key 'normal 'global (kbd "<leader>gc") 'avy-goto-char-2)
   (evil-define-key 'normal 'global (kbd "<leader>gw") 'avy-goto-word-0)
+  (evil-define-key 'normal 'global (kbd "<leader>ot") 'vterm-toggle)
   
   (defalias 'evil-insert-state 'evil-emacs-state)
   (define-key evil-emacs-state-map (kbd "<escape>") 'evil-normal-state)
@@ -39,6 +42,7 @@
 
 ;; which key
 (use-package which-key
+  :defer t
   :init (which-key-mode))
 
 (provide 'init-evil)

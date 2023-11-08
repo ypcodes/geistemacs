@@ -1,9 +1,12 @@
-(use-package consult)
+(use-package consult
+  :defer t)
 (use-package marginalia
+  :after consult
   :config
   (marginalia-mode))
 
 (use-package embark
+  :after consult
   :bind
   (("C-." . embark-act)         ;; pick some comfortable binding
    ("C-;" . embark-dwim)        ;; good alternative: M-.
@@ -28,11 +31,14 @@
 
 ;; Consult users will also want the embark-consult package.
 (use-package embark-consult
+  :after embark
   :hook
   (embark-collect-mode . consult-preview-at-point-mode))
 
 ;; vertico
 (use-package vertico
+  :defer t
+  :commands (execute-extended-command)
   :init
   (vertico-mode)
   :config
@@ -76,10 +82,12 @@
   (avy-setup-default))
 
 (use-package yasnippet
+  :defer t
   :init (yas-global-mode 1)
   )
 
 (use-package lsp-bridge
+  :after yasnippet
   :init
   (global-lsp-bridge-mode)
   )
@@ -87,6 +95,8 @@
 ;; tempalte
 ;; Configure Tempel
 (use-package tempel
+  :defer t
+  :commands (tempel-insert)
   ;; Require trigger prefix before template name when completing.
   ;; :custom
   ;; (tempel-trigger-prefix "<")
@@ -121,7 +131,8 @@
 
 ;; Optional: Add tempel-collection.
 ;; The package is young and doesn't have comprehensive coverage.
-(use-package tempel-collection)
+(use-package tempel-collection
+  :after tempel)
 
 
 (provide 'init-complete)
