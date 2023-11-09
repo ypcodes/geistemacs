@@ -244,6 +244,9 @@
 [submodule "posframe"]
 	path = lib/posframe
 	url = https://github.com/tumashu/posframe
+[submodule "powershell-mode"]
+	path = lib/powershell-mode
+	url = https://github.com/fperrin/powershell-mode
 [submodule "projectile"]
 	path = lib/projectile
 	url = https://github.com/bbatsov/projectile
