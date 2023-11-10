@@ -12,3 +12,6 @@ init.elc
 .dir-locals.el
 /places
 /projects
+.org-id-locations
+recentf
+transient

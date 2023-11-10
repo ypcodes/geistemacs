@@ -5,7 +5,8 @@
   :custom
   (eaf-browser-continue-where-left-off t)
   (eaf-browser-enable-adblocker t)
-  (browse-url-browser-function 'eaf-open-browser)
+  ;;  (browse-url-browser-function 'eaf-open-browser)
+  
   ;; maps
   :config
   (require 'eaf-pyqterminal)
@@ -21,5 +22,12 @@
   (setq eaf-proxy-type "http")
   (setq eaf-proxy-host "127.0.0.1")
   (setq eaf-proxy-port "7890"))
+
+;; browser
+(if(info-file-exists-p "/mnt/c/WINDOWS/explorer.exe")
+    (setq browse-url-browser-function 'browse-url-generic
+	  browse-url-generic-program "/mnt/c/WINDOWS/explorer.exe")
+  (setq browse-url-browser-function 'eaf-open-browser)
+  )
 
 (provide 'init-eaf)

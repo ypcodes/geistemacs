@@ -22,7 +22,9 @@
     (scroll-bar-mode 0))
   (when (fboundp 'tool-bar-mode)
     (tool-bar-mode 0))
-  (menu-bar-mode 0))
+  (menu-bar-mode 0)
+  (electric-indent-mode)
+)
 
 (eval-and-compile ; `borg'
   (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
@@ -216,7 +218,7 @@
 
   ;; Enable recursive minibuffers
   (setq enable-recursive-minibuffers t)
-  (setq visible-bell 0)
+  (setq visible-bell -1)
   (electric-pair-mode t)
   (electric-indent-mode t)
   (electric-layout-mode t)

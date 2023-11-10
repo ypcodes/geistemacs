@@ -23,7 +23,13 @@
   (evil-define-key 'normal 'global (kbd "<leader>gl") 'avy-goto-line)
   (evil-define-key 'normal 'global (kbd "<leader>gc") 'avy-goto-char-2)
   (evil-define-key 'normal 'global (kbd "<leader>gw") 'avy-goto-word-0)
+  (evil-define-key 'normal 'global (kbd "<leader>gg") 'magit)
+  (evil-define-key 'normal 'global (kbd "<leader>ga") 'magit-stage-file)
+  (evil-define-key 'normal 'global (kbd "<leader>gp") 'magit-push-current-to-upstream)
   (evil-define-key 'normal 'global (kbd "<leader>ot") 'vterm-toggle)
+  (evil-define-key 'normal 'global (kbd "<leader>os") 'eaf-search-it)
+  (evil-define-key 'normal 'global (kbd "<leader>ob") 'eaf-open-browser-with-history)
+  (evil-define-key 'normal 'global (kbd "<leader>oe") 'eaf-open)
   
   (defalias 'evil-insert-state 'evil-emacs-state)
   (define-key evil-emacs-state-map (kbd "<escape>") 'evil-normal-state)
