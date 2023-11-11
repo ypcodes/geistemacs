@@ -226,6 +226,21 @@
   (global-display-line-numbers-mode t)
   (setq confirm-kill-processes nil)
   (setq confirm-kill-emacs nil)
+
+  (defvar geist/frame-transparency '(90 . 90))
+  ;; Set frame transparency
+  (set-frame-parameter (selected-frame) 'alpha geist/frame-transparency)
+  (add-to-list 'default-frame-alist `(alpha . ,geist/frame-transparency))
+  (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
+  (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+  ;; Disable line numbers for some modes
+  (dolist (mode '(org-mode-hook
+                  term-mode-hook
+                  shell-mode-hook
+                  treemacs-mode-hook
+                  eshell-mode-hook))
+    (add-hook mode (lambda () (display-line-numbers-mode 0))))
   )
 
 (use-package benchmark-init

@@ -35,6 +35,12 @@
   
   (evil-define-key 'normal 'global (kbd "<leader>ss") 'consult-line)
   (evil-define-key 'normal 'global (kbd "<leader>so") 'consult-outline)
+
+  ;; helpful
+  (evil-define-key 'normal 'global (kbd "<leader>hk") 'helpful-key)
+  (evil-define-key 'normal 'global (kbd "<leader>hf") 'helpful-function)
+  (evil-define-key 'normal 'global (kbd "<leader>hv") 'helpful-variable)
+  (evil-define-key 'normal 'global (kbd "<leader>hc") 'helpful-command)
   
   (defalias 'evil-insert-state 'evil-emacs-state)
   (define-key evil-emacs-state-map (kbd "<escape>") 'evil-normal-state)

@@ -52,6 +52,9 @@
 [submodule "eaf"]
 	path = lib/eaf
 	url = https://github.com/emacs-eaf/emacs-application-framework
+[submodule "elisp-refs"]
+	path = lib/elisp-refs
+	url = https://github.com/Wilfred/elisp-refs
 [submodule "emacsql"]
 	path = lib/emacsql
 	url = git@github.com:magit/emacsql.git
@@ -76,6 +79,9 @@
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
+[submodule "helpful"]
+	path = lib/helpful
+	url = https://github.com/Wilfred/helpful
 [submodule "jinx"]
 	path = lib/jinx
 	url = https://github.com/minad/jinx

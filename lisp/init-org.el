@@ -39,8 +39,9 @@
      " ┄┄┄┄┄ " "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄")
    org-agenda-current-time-string
    "◀── now ─────────────────────────────────────────────────")
-  (setq org-agenda-files '("~/org/diary.org" "~/org/Inbox.org" "~/org/todo.org")
-	org-log-repeat "note")
+  
+  (setq org-agenda-files '("~/org/Inbox.org" "~/org/diary.org" "~/org/todo.org"))
+  (setq org-hide-leading-stars t)
   )
 
 (use-package org-bullets
