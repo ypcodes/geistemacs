@@ -95,4 +95,26 @@
   (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
   (org-roam-db-autosync-mode))
 
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+(setq org-habit-show-habits-only-for-today t)
+
+;; Enable clocking
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+
+;; Enable syntax highlighting in Org buffers
+(setq org-src-fontify-natively t)
+
+;; Enable auto-saving of the Org buffer after refiling
+(advice-add 'org-refile :after 'org-save-all-org-buffers)
+
+;; Enable inline images in Org mode
+(setq org-startup-with-inline-images t)
+
+(use-package org-super-agenda
+  :after org-agenda
+  :config
+  (org-super-agenda-mode))
+
 (provide 'init-org)
