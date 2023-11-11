@@ -57,4 +57,13 @@
   :defer t
   :init (which-key-mode))
 
+(use-package multiple-cursors
+  :defer t
+  :after evil
+  :config
+  (evil-define-key 'normal 'global (kbd "M-d") 'mc/mark-next-like-this-word)
+  (evil-define-key 'normal 'global (kbd "M-S-d") 'mc/mark-previous-like-this-word)
+  (evil-define-key 'normal 'global (kbd "<leader>ml") 'mc/edit-lines)
+  )
+
 (provide 'init-evil)

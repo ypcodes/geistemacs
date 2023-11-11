@@ -220,6 +220,9 @@
 [submodule "markdown-mode"]
 	path = lib/markdown-mode
 	url = https://github.com/jrblevin/markdown-mode
+[submodule "multiple-cursors"]
+	path = lib/multiple-cursors
+	url = https://github.com/magnars/multiple-cursors.el
 [submodule "nerd-icons"]
 	path = lib/nerd-icons
 	url = https://github.com/rainstormstudio/nerd-icons.el
