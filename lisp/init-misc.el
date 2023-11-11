@@ -1,10 +1,13 @@
-(use-package vterm
-  :defer t
-  :commands (vterm)
-  )
+(if (not (eq system-type 'ms-dos))
+    (progn
+      (use-package vterm
+	:defer t
+	:commands (vterm))
 
-(use-package vterm-toggle
-  :after vterm)
+      (use-package vterm-toggle
+	:after vterm)
+      )
+  )
 
 ;; spell checker
 (use-package jinx

@@ -192,9 +192,9 @@
 
 (use-package emacs
   :init
-  (add-to-list 'default-frame-alist '(font . "FiraCode Nerd FOnt"))
-  (set-face-attribute 'default t :font "FiraCode Nerd Font" )
-  (set-face-attribute 'default (selected-frame) :height 120)
+  (add-to-list 'default-frame-alist '(font . "Sarasa Term SC Nerd"))
+  (set-face-attribute 'default t :font "Sarasa Term SC Nerd" )
+  (set-face-attribute 'default (selected-frame) :height 130)
   ;; Add prompt indicator to `completing-read-multiple'.
   ;; We display [CRM<separator>], e.g., [CRM,] if the separator is a comma.
   (defun crm-indicator (args)
@@ -223,9 +223,10 @@
   (electric-indent-mode t)
   (electric-layout-mode t)
   (global-hl-line-mode t)
+  (global-display-line-numbers-mode t)
   (setq confirm-kill-processes nil)
   (setq confirm-kill-emacs nil)
-)
+  )
 
 (use-package benchmark-init
   :config
