@@ -42,13 +42,33 @@
   
   (setq org-agenda-files '("~/org/Inbox.org" "~/org/diary.org" "~/org/todo.org"))
   (setq org-hide-leading-stars t)
+
+  ;; functions
+  (defun geist/org-mode-visual-fill ()
+    (setq visual-fill-column-width 100
+          visual-fill-column-center-text t)
+    (visual-fill-column-mode 1))
+
+  (use-package visual-fill-column
+    :hook (org-mode . geist/org-mode-visual-fill))
+
+  (with-eval-after-load 'org
+    (org-babel-do-load-languages
+     'org-babel-load-languages
+     '((emacs-lisp . t)
+       (cc . t)
+       (bash . t)
+       (powershell . t)
+       (python . t)))
+
+    (push '("conf-unix" . conf-unix) org-src-lang-modes))
   )
 
 (use-package org-bullets
   :after org
   :config
   (org-bullets-mode t)
-)
+  )
 
 (use-package org-modern
   :after org
