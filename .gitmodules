@@ -67,6 +67,9 @@
 [submodule "evil-collection"]
 	path = lib/evil-collection
 	url = https://github.com/emacs-evil/evil-collection
+[submodule "expand-region"]
+	path = lib/expand-region
+	url = https://github.com/magnars/expand-region.el
 [submodule "f"]
 	path = lib/f
 	url = https://github.com/rejeep/f.el
