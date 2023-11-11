@@ -97,9 +97,6 @@
 [submodule "lib/consult"]
 	path = lib/consult
 	url = https://github.com/minad/consult
-[submodule "lib/dash.el"]
-	path = lib/dash.el
-	url = git@github.com:magnars/dash.el.git
 [submodule "lib/diff-hl"]
 	path = lib/diff-hl
 	url = git@github.com:dgutov/diff-hl.git
@@ -151,9 +148,6 @@
 [submodule "lib/nerd-icons-completion"]
 	path = lib/nerd-icons-completion
 	url = https://github.com/rainstormstudio/nerd-icons-completion
-[submodule "lib/nerd-icons.el"]
-	path = lib/nerd-icons.el
-	url = https://github.com/rainstormstudio/nerd-icons.el
 [submodule "lib/orderless"]
 	path = lib/orderless
 	url = https://github.com/oantolin/orderless
@@ -172,12 +166,6 @@
 [submodule "lib/posframe"]
 	path = lib/posframe
 	url = https://github.com/tumashu/posframe
-[submodule "lib/s.el"]
-	path = lib/s.el
-	url = https://github.com/magnars/s.el
-[submodule "lib/shrink-path.el"]
-	path = lib/shrink-path.el
-	url = https://gitlab.com/bennya/shrink-path.el
 [submodule "lib/tempel"]
 	path = lib/tempel
 	url = https://github.com/minad/tempel
