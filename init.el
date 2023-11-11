@@ -254,8 +254,8 @@
 (add-to-list 'load-path (concat user-emacs-directory "lisp"))
 
 (require 'init-ui)
-(require 'init-complete)
 (require 'init-evil)
+(require 'init-complete)
 (require 'init-org)
 (require 'init-eaf)
 (require 'init-misc)

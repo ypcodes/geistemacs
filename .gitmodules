@@ -76,6 +76,9 @@
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
+[submodule "jinx"]
+	path = lib/jinx
+	url = https://github.com/minad/jinx
 [submodule "lib/annalist.el"]
 	path = lib/annalist.el
 	url = https://github.com/noctuid/annalist.el
