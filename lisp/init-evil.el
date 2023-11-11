@@ -41,6 +41,15 @@
   (evil-define-key 'normal 'global (kbd "<leader>hf") 'helpful-function)
   (evil-define-key 'normal 'global (kbd "<leader>hv") 'helpful-variable)
   (evil-define-key 'normal 'global (kbd "<leader>hc") 'helpful-command)
+
+  ;; window
+  (evil-define-key 'normal 'global (kbd "<leader>wv") 'evil-window-vsplit)
+  (evil-define-key 'normal 'global (kbd "<leader>ws") 'evil-window-split)
+  (evil-define-key 'normal 'global (kbd "<leader>wc") 'delete-window)
+  
+  (evil-define-key 'normal 'global (kbd "M-d") 'mc/mark-next-like-this-word)
+  (evil-define-key 'normal 'global (kbd "M-S-d") 'mc/mark-previous-like-this-word)
+  (evil-define-key 'normal 'global (kbd "<leader>ml") 'mc/edit-lines)
   
   (defalias 'evil-insert-state 'evil-emacs-state)
   (define-key evil-emacs-state-map (kbd "<escape>") 'evil-normal-state)
@@ -67,9 +76,7 @@
   :defer t
   :after evil
   :config
-  (evil-define-key 'normal 'global (kbd "M-d") 'mc/mark-next-like-this-word)
-  (evil-define-key 'normal 'global (kbd "M-S-d") 'mc/mark-previous-like-this-word)
-  (evil-define-key 'normal 'global (kbd "<leader>ml") 'mc/edit-lines)
+  (multiple-cursors-mode t)
   )
 
 (provide 'init-evil)

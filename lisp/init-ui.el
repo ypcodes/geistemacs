@@ -33,23 +33,7 @@
   
   (setq dashboard-display-icons-p t) ;; display icons on both GUI and terminal
   (setq dashboard-icon-type 'nerd-icons) ;; use `nerd-icons' package
-  
-  ;; (setq dashboard-set-heading-icons t)
-  ;; (setq dashboard-set-file-icons t)
-  
-  ;; ;;(add-to-list 'dashboard-items '(agenda) t)
-
-  ;; (setq dashboard-week-agenda t)
-  ;; (setq dashboard-items '((recents  . 5)
-  ;;                       (bookmarks . 5)
-  ;;                       (projects . 5)
-  ;;                       (agenda . 5)
-  ;;                       (registers . 5)))
-  ;; (setq dashboard-item-names '(("Recent Files:" . "Recently opened files:")
-  ;;                            ("Agenda for today:" . "Today's agenda:")
-  ;;                            ("Agenda for the coming week:" . "Agenda:")))
-  ;; (setq dashboard-set-navigator t)
-)
+  )
 
 (use-package aggressive-indent
   :after vertico

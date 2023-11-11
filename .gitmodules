@@ -298,6 +298,9 @@
 [submodule "vertico"]
 	path = lib/vertico
 	url = https://github.com/minad/vertico
+[submodule "visual-fill-column"]
+	path = lib/visual-fill-column
+	url = https://codeberg.org/joostkremers/visual-fill-column
 [submodule "vterm"]
 	path = lib/vterm
 	url = https://github.com/akermu/emacs-libvterm

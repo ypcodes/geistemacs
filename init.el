@@ -31,21 +31,6 @@
   (require 'borg)
   (borg-initialize))
 
-(defun borg-assimilate-if-needed (package &url)
-  "Assimilate the given package if it does not already exist.
-
-  Args:
-    package: The name of the package to assimilate.
-    url: The URL of the package repository.
-
-  Returns:
-    nil if the package already exists, or the return value of
-    `borg-assimilate` if the package was assimilated."
-
-  (if (borg-package-p package)
-      nil
-      (borg-assimilate package url)))
-
 (eval-and-compile ; `use-package'
   (require  'use-package)
   (setq use-package-verbose t))
@@ -152,10 +137,12 @@
 
 (use-package recentf
   :demand t
-  :config (add-to-list 'recentf-exclude "^/\\(?:ssh\\|su\\|sudo\\)?x?:"))
+  :config
+  (add-to-list 'recentf-exclude "^/\\(?:ssh\\|su\\|sudo\\)?x?:")
+  )
 
 ;;(use-package savehist
-  ;;:config (savehist-mode))
+;;:config (savehist-mode))
 
 (use-package saveplace
   ;;:when (version< "25" emacs-version)
