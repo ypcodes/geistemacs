@@ -91,10 +91,13 @@
 (use-package lsp-bridge
   :after yasnippet
   :init
-  (global-lsp-bridge-mode))
+  (global-lsp-bridge-mode)
+  :config
+  (evil-define-key 'normal 'global (kbd "<leader>cf") 'lsp-bridge-code-format)
+  )
 
-;; tempalte
-;; Configure Tempel
+;; template
+;; Configure `tempel'
 (use-package tempel
   :defer t
   :commands (tempel-insert)
@@ -106,7 +109,7 @@
 
   ;; Setup completion at point
   (defun tempel-setup-capf ()
-    ;; Add the Tempel Capf to `completion-at-point-functions'.
+    ;; Add the `Tempel' `Capf' to `completion-at-point-functions'.
     ;; `tempel-expand' only triggers on exact matches. Alternatively use
     ;; `tempel-complete' if you want to see all matches, but then you
     ;; should also configure `tempel-trigger-prefix', such that Tempel

@@ -241,6 +241,9 @@
 [submodule "page-break-lines"]
 	path = lib/page-break-lines
 	url = https://github.com/purcell/page-break-lines
+[submodule "persp-mode"]
+	path = lib/persp-mode
+	url = https://github.com/Bad-ptr/persp-mode.el
 [submodule "posframe"]
 	path = lib/posframe
 	url = https://github.com/tumashu/posframe

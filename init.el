@@ -259,6 +259,7 @@
 (require 'init-org)
 (require 'init-eaf)
 (require 'init-misc)
+(require 'init-workspace)
 
 ;; Local Variables:
 ;; indent-tabs-mode: nil
