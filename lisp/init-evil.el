@@ -11,7 +11,7 @@
   ;; keybinding
   (evil-set-leader 'motion (kbd "SPC"))
   (evil-define-key 'normal 'global (kbd "<leader>fs") 'save-buffer)
-  (evil-define-key 'normal 'global (kbd "<leader>:") 'execute-extended-command)
+  (evil-define-key 'normal 'global (kbd "<leader>;") 'execute-extended-command)
   (evil-define-key 'normal 'global (kbd "<leader>SPC") 'project-find-file)
   (evil-define-key 'normal 'global (kbd "<leader>ff") 'find-file)
   (evil-define-key 'normal 'global (kbd "<leader>fr") 'recentf)
@@ -20,9 +20,9 @@
   (evil-define-key 'normal 'global (kbd "<leader>bi") 'ibuffer)
   (evil-define-key 'normal 'global (kbd "<leader>bk") 'kill-current-buffer)
   (evil-define-key 'normal 'global (kbd "<leader>qq") 'save-buffers-kill-emacs)
-  (evil-define-key 'normal 'global (kbd "<leader>gl") 'avy-goto-line)
-  (evil-define-key 'normal 'global (kbd "<leader>gc") 'avy-goto-char-2)
-  (evil-define-key 'normal 'global (kbd "<leader>gw") 'avy-goto-word-0)
+  (evil-define-key 'normal 'global (kbd "<leader>jj") 'avy-goto-line)
+  (evil-define-key 'normal 'global (kbd "<leader>jc") 'avy-goto-char-2)
+  (evil-define-key 'normal 'global (kbd "<leader>jw") 'avy-goto-word-1)
   (evil-define-key 'normal 'global (kbd "<leader>gg") 'magit)
   (evil-define-key 'normal 'global (kbd "<leader>ga") 'magit-stage-file)
   (evil-define-key 'normal 'global (kbd "<leader>gp") 'magit-push-current-to-upstream)
@@ -30,6 +30,11 @@
   (evil-define-key 'normal 'global (kbd "<leader>os") 'eaf-search-it)
   (evil-define-key 'normal 'global (kbd "<leader>ob") 'eaf-open-browser-with-history)
   (evil-define-key 'normal 'global (kbd "<leader>oe") 'eaf-open)
+  
+  ;; search
+  
+  (evil-define-key 'normal 'global (kbd "<leader>ss") 'consult-line)
+  (evil-define-key 'normal 'global (kbd "<leader>so") 'consult-outline)
   
   (defalias 'evil-insert-state 'evil-emacs-state)
   (define-key evil-emacs-state-map (kbd "<escape>") 'evil-normal-state)

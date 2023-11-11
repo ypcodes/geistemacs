@@ -28,6 +28,6 @@
     (setq browse-url-browser-function 'browse-url-generic
 	  browse-url-generic-program "/mnt/c/WINDOWS/explorer.exe")
   (setq browse-url-browser-function 'eaf-open-browser)
-  )
+)
 
 (provide 'init-eaf)

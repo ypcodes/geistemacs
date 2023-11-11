@@ -1,6 +1,9 @@
 [include]
 	path = .gitremotes
 	path = .borgconfig
+[submodule "aggressive-indent"]
+	path = lib/aggressive-indent
+	url = https://github.com/Malabarba/aggressive-indent-mode
 [submodule "all-the-icons"]
 	path = lib/all-the-icons
 	url = https://github.com/domtronn/all-the-icons.el
@@ -22,6 +25,9 @@
 [submodule "borg"]
 	path = lib/borg
 	url = git@github.com:emacscollective/borg.git
+[submodule "catppuccin-theme"]
+	path = lib/catppuccin-theme
+	url = https://github.com/catppuccin/emacs
 [submodule "closql"]
 	path = lib/closql
 	url = git@github.com:magit/closql.git
@@ -43,9 +49,6 @@
 [submodule "doom-modeline"]
 	path = lib/doom-modeline
 	url = https://github.com/seagle0128/doom-modeline
-[submodule "doom-themes"]
-	path = lib/doom-themes
-	url = https://github.com/doomemacs/themes
 [submodule "eaf"]
 	path = lib/eaf
 	url = https://github.com/emacs-eaf/emacs-application-framework

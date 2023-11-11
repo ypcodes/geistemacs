@@ -1,5 +1,9 @@
-(use-package doom-themes
-  :init (load-theme 'doom-one t))
+(use-package catppuccin-theme
+  :custom
+  (setq catppuccin-flavor 'mocha)
+  :config
+  (load-theme 'catppuccin :no-confirm)
+)
 
 (use-package doom-modeline
   :init (doom-modeline-mode 1))
@@ -46,5 +50,11 @@
   ;;                            ("Agenda for the coming week:" . "Agenda:")))
   ;; (setq dashboard-set-navigator t)
 )
+
+(use-package aggressive-indent
+  :after vertico
+  :config
+  (global-aggressive-indent-mode))
+
 
 (provide 'init-ui)
