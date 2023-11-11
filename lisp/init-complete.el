@@ -84,13 +84,14 @@
 (use-package yasnippet
   :defer t
   :init (yas-global-mode 1)
+  :config
+  (evil-define-key 'normal 'global (kbd "<leader>is") 'yas-insert-snippet)
   )
 
 (use-package lsp-bridge
   :after yasnippet
   :init
-  (global-lsp-bridge-mode)
-  )
+  (global-lsp-bridge-mode))
 
 ;; tempalte
 ;; Configure Tempel
@@ -100,9 +101,6 @@
   ;; Require trigger prefix before template name when completing.
   ;; :custom
   ;; (tempel-trigger-prefix "<")
-
-  :bind (("M-+" . tempel-complete) ;; Alternative tempel-expand
-         ("M-*" . tempel-insert))
 
   :init
 
@@ -126,8 +124,11 @@
   ;; Optionally make the Tempel templates available to Abbrev,
   ;; either locally or globally. `expand-abbrev' is bound to C-x '.
   (add-hook 'prog-mode-hook #'tempel-abbrev-mode)
-  (global-tempel-abbrev-mode)
-)
+
+  (evil-define-key 'normal 'global (kbd "<leader>it") 'tempel-insert)
+  (evil-define-key 'normal 'global (kbd "<leader>ic") 'tempel-complete)
+
+  (global-tempel-abbrev-mode))
 
 ;; Optional: Add tempel-collection.
 ;; The package is young and doesn't have comprehensive coverage.
