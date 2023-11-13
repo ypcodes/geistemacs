@@ -10,6 +10,9 @@
 [submodule "annalist"]
 	path = lib/annalist
 	url = https://github.com/noctuid/annalist.el
+[submodule "auctex"]
+	path = lib/auctex
+	url = https://git.savannah.gnu.org/git/auctex.git
 [submodule "auto-compile"]
 	path = lib/auto-compile
 	url = git@github.com:emacscollective/auto-compile.git
