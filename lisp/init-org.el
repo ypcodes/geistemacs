@@ -17,8 +17,44 @@
   :hook (org-mode . geist/org-mode-setup)
   :config
   (setq org-agenda-files '("~/org/Inbox.org" "~/org/diary.org" "~/org/todo.org"))
+  (setq org-default-notes-file (concat org-directory "/gtd.org"))
   (setq org-hide-leading-stars t)
 
+  (setq org-capture-templates
+	'(("t" "Todo" entry (file+headline "~/org/Inbox.org" "Tasks")
+           "* TODO %?\n  %i\n  %a")
+          ("j" "Journal" entry (file+datetree "~/org/diary.org")
+           "* %?\nEntered on %U\n  %i\n  %a")
+	  ("n" "Note" entry (file "~/org/notes.org")
+           "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
+	  ("b" "Book" entry (file+olp+datetree
+                             (concat org-directory "/book.org"))
+	   "* Topic: %^{Description}  %^g %? Added: %U")
+	  ))
+
+  ;; org embedded YouTube
+
+  (defvar yt-iframe-format
+    ;; You may want to change your width and height.
+    (concat "<iframe width=\"440\""
+            " height=\"335\""
+            " src=\"https://www.youtube.com/embed/%s\""
+            " frameborder=\"0\""
+            " allowfullscreen>%s</iframe>"))
+
+  (org-add-link-type
+   "yt"
+   (lambda (handle)
+     (browse-url
+      (concat "https://www.youtube.com/embed/"
+              handle)))
+   (lambda (path desc backend)
+     (cl-case backend
+       (html (format yt-iframe-format
+                     path (or desc "")))
+       (latex (format "\href{%s}{%s}"
+                      path (or desc "video"))))))
+  
   ;; Org styling and settings
   (setq org-auto-align-tags nil
         org-indent-mode t
@@ -47,7 +83,7 @@
   ;; Section 1.1: Org mode visual-fill configuration
   (use-package visual-fill-column
     :hook (org-mode . geist/org-mode-visual-fill))
-
+  
   ;; Section 1.2: Org Babel setup
   (with-eval-after-load 'org
     (org-babel-do-load-languages
@@ -61,6 +97,8 @@
 ;; Section 2: Org Bullets Configuration
 (use-package org-bullets
   :after org
+  :custom
+  (org-bullets-bullet-list '("◉" "☯" "○" "☯" "✸" "☯" "✿" "☯" "✜" "☯" "◆" "☯" "▶"))
   :config
   (org-bullets-mode t))
 
