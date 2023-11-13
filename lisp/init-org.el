@@ -94,6 +94,14 @@
        (python . t)))
     (push '("conf-unix" . conf-unix) org-src-lang-modes)))
 
+;; org contrib
+;; Installing and configure ORG-CONTRIB 
+(use-package org-contrib
+  :config
+  (require 'ox-extra)
+  (ox-extras-activate '(latex-header-blocks ignore-headlines)))
+
+
 ;; Section 2: Org Bullets Configuration
 (use-package org-bullets
   :after org
@@ -147,6 +155,67 @@
   :after org-agenda
   :config
   (org-super-agenda-mode))
+
+(with-eval-after-load 'ox-latex
+  (add-to-list 'org-latex-classes
+               '("elsarticle"
+                 "\\documentclass{elsarticle}
+   [NO-DEFAULT-PACKAGES]
+\usepackage{ctex}
+   [EXTRA]"
+                 ("\\section{%s}" . "\\section*{%s}")
+                 ("\\subsection{%s}" . "\\subsection*{%s}")
+                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                 ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                 ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+  (add-to-list 'org-latex-classes
+               '("mimosis"
+                 "\\documentclass{mimosis}
+   [NO-DEFAULT-PACKAGES]
+\usepackage{ctex}
+   [EXTRA]
+  \\newcommand{\\mboxparagraph}[1]{\\paragraph{#1}\\mbox{}\\\\}
+  \\newcommand{\\mboxsubparagraph}[1]{\\subparagraph{#1}\\mbox{}\\\\}"
+                 ("\\chapter{%s}" . "\\chapter*{%s}")
+                 ("\\section{%s}" . "\\section*{%s}")
+                 ("\\subsection{%s}" . "\\subsection*{%s}")
+                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                 ("\\mboxparagraph{%s}" . "\\mboxparagraph*{%s}")
+                 ("\\mboxsubparagraph{%s}" . "\\mboxsubparagraph*{%s}")))
+
+  (add-to-list 'org-latex-classes
+               '( "koma-article"
+                  "\\documentclass{scrartcl}"
+                  ( "\\section{%s}" . "\\section*{%s}" )
+                  ( "\\subsection{%s}" . "\\subsection*{%s}" )
+                  ( "\\subsubsection{%s}" . "\\subsubsection*{%s}" )
+                  ( "\\paragraph{%s}" . "\\paragraph*{%s}" )
+                  ( "\\subparagraph{%s}" . "\\subparagraph*{%s}" )))
+  )
+;; Coloured LaTeX using Minted
+(setq org-latex-listings 'minted
+      org-latex-packages-alist '(("" "minted"))
+      org-latex-pdf-process
+      '("latexmk -pdflatex='xelatex -shell-escape -interaction nonstopmode' -pdf -bibtex -output-directory=%o -f %f"))
+
+;; syntex-highlighting
+(use-package htmlize)
+;;Don’t include a footer...etc in exported HTML document.
+(setq org-html-postamble nil)
+(setq org-src-window-setup 'current-window)
+
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images)
+(add-hook 'org-mode-hook 'org-display-inline-images)
+(custom-set-variables
+ '(org-export-backends '(ascii beamed html calendar latex DOT)))
+
+(defun enable-writing-minor-modes ()
+  "Enable flyspell and visual line mode for calling from mode hooks"
+  (visual-line-mode 1)
+  (flyspell-mode 1))
+
+(use-package org
+  :hook (org-mode . enable-writing-minor-modes))
 
 ;; Section 9: Provide the feature
 (provide 'init-org)

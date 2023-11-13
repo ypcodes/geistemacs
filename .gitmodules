@@ -85,6 +85,9 @@
 [submodule "ht"]
 	path = lib/ht
 	url = https://github.com/Wilfred/ht.el
+[submodule "htmlize"]
+	path = lib/htmlize
+	url = https://github.com/hniksic/emacs-htmlize
 [submodule "jinx"]
 	path = lib/jinx
 	url = https://github.com/minad/jinx
@@ -238,6 +241,9 @@
 [submodule "org-bullets"]
 	path = lib/org-bullets
 	url = https://github.com/integral-dw/org-bullets
+[submodule "org-contrib"]
+	path = lib/org-contrib
+	url = https://git.sr.ht/~bzg/org-contrib
 [submodule "org-evil"]
 	path = lib/org-evil
 	url = https://github.com/GuiltyDolphin/org-evil
