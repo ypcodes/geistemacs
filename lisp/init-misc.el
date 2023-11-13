@@ -11,10 +11,10 @@
 
 ;; spell checker
 (use-package jinx
-  :hook (emacs-startup . global-jinx-mode)
   :config
   (setq jinx-languages "en_US")
   (evil-define-key 'normal 'global (kbd "<leader>cw") 'jinx-correct))
+
 (use-package helpful
   :commands (helpful-callable helpful-variable helpful-command helpful-key)
   :custom
