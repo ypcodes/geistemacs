@@ -10,6 +10,7 @@
 (defun geist/org-mode-setup ()
   "org-mode-initial-setup"
   (org-indent-mode t)
+  (toc-org-mode)
   )
 
 ;; Section 1: Org Mode Configuration

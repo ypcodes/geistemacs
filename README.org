@@ -4,6 +4,9 @@
 
 My customized Emacs configuration, use vertico as completion and lsp-bridge as completion.
 
+* Table of Contents :toc:
+- [[#installation][Installation]]
+
 * Installation
 To install, just clone to ~user-emacs-directory~, i.e. ~~/.emacs.d~ or ~~/.config/emacs~
 #+begin_src bash :export no
