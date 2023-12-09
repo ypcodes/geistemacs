@@ -179,8 +179,8 @@
 
 (use-package emacs
   :init
-  (add-to-list 'default-frame-alist '(font . "Sarasa Term SC Nerd"))
-  (set-face-attribute 'default t :font "Sarasa Term SC Nerd" )
+  (add-to-list 'default-frame-alist '(font . "FiraCode Nerd Font"))
+  (set-face-attribute 'default t :font "FiraCode Nerd Font" )
   (set-face-attribute 'default (selected-frame) :height 130)
   ;; Add prompt indicator to `completing-read-multiple'.
   ;; We display [CRM<separator>], e.g., [CRM,] if the separator is a comma.
